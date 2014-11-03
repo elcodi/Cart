@@ -16,14 +16,14 @@
 
 namespace Elcodi\Component\Cart\Entity;
 
-use Elcodi\Component\Cart\Entity\Abstracts\AbstractHistory;
-use Elcodi\Component\Cart\Entity\Interfaces\OrderHistoryInterface;
 use Elcodi\Component\Cart\Entity\Interfaces\OrderInterface;
+use Elcodi\Component\Cart\Entity\Interfaces\OrderStateLineInterface;
+use Elcodi\Component\StateTransitionMachine\Entity\StateLine;
 
 /**
- * OrderHistory
+ * Class OrderStateLine
  */
-class OrderHistory extends AbstractHistory implements OrderHistoryInterface
+class OrderStateLine extends StateLine implements OrderStateLineInterface
 {
     /**
      * @var OrderInterface
@@ -33,26 +33,26 @@ class OrderHistory extends AbstractHistory implements OrderHistoryInterface
     protected $order;
 
     /**
-     * Set the order
+     * Get Order
      *
-     * @param OrderInterface $order Order to set
+     * @return OrderInterface Order
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * Sets Order
      *
-     * @return $this self Object
+     * @param OrderInterface $order Order
+     *
+     * @return $this Self object
      */
     public function setOrder(OrderInterface $order)
     {
         $this->order = $order;
 
         return $this;
-    }
-
-    /**
-     * Get the order
-     *
-     * @return Order
-     */
-    public function getOrder()
-    {
-        return $this->order;
     }
 }

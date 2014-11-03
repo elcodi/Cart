@@ -14,13 +14,13 @@
  * @author Aldo Chiecchia <zimage@tiscali.it>
  */
 
-namespace Elcodi\Component\Cart\Event;
+namespace Elcodi\Component\Cart\Repository;
 
-use Elcodi\Component\Cart\Event\Abstracts\AbstractOrderLineStateEvent;
+use Doctrine\ORM\EntityRepository;
 
 /**
- * Class OrderLineStatePreChangeEvent
+ * OrderStateLineRepository
  */
-class OrderLineStatePreChangeEvent extends AbstractOrderLineStateEvent
+class OrderStateLineRepository extends EntityRepository
 {
 }
