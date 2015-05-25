@@ -20,11 +20,11 @@ namespace Elcodi\Component\Cart\EventListener;
 use Elcodi\Component\Cart\Event\CartOnLoadEvent;
 
 /**
- * Class LimitNegativeCartsListener
+ * Class LimitNegativeCartEventListener
  *
  * @author Berny Cantos <be@rny.cc>
  */
-class LimitNegativeCartsListener
+class LimitNegativeCartEventListener
 {
     /**
      * When a cart goes below 0 (due to discounts), set the amount to 0.
